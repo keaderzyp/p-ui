@@ -1,0 +1,225 @@
+@import '../../styles/css/font-awesome.min.css';
+@import '../../styles/base.scss';
+@import './p-button-declares.scss';
+
+.p-button{
+	border-radius: 4px;
+	outline: none;
+	border:1px solid $defaultFontColor;
+	color:$defaultFontColor;
+	cursor: pointer;
+	margin-left: 10px;
+	font-size: 14px;
+	padding: 12px 20px;
+	transition: .1s;
+	.fa{
+		transform: scale(.8);
+	}
+	.p-btn-loading{
+		animation-name: btn-loading;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+		animation-duration: .5s;
+	}
+}
+@keyframes btn-loading {
+	from{
+		transform:scale(.8) rotate(0deg);
+	}
+	to{
+		transform:scale(.8) rotate(360deg);
+	}
+}
+$buttonTypeMap:(
+	default:(
+		color:$defaultColor,
+		borderColor:$defaultBorderColor,
+		backgroundColor:$defaultBackgroundColor,
+		hoverColor:$defaultHoverColor,
+		hoverBorderColor:$defaultHoverBorderColor,
+		hoverBackgroundColor:$defaultHoverBackgroundColor,
+		activeColor:$defaultActiveColor,
+		activeBorderColor:$defaultActiveBorderColor,
+		activeBackgroundColor:$defaultActiveBackgroundColor,
+		colorPlain:$defaultColorPlain,
+		borderColorPlain:$defaultBorderColorPlain,
+		backgroundColorPlain:$defaultBackgroundColorPlain,
+		hoverColorPlain:$defaultHoverColorPlain,
+		hoverBorderColorPlain:$defaultHoverBorderColorPlain,
+		hoverBackgroundColorPlain:$defaultHoverBackgroundColorPlain,
+		activeColorPlain:$defaultActiveColorPlain,
+		activeBorderColorPlain:$defaultActiveBorderColorPlain,
+		activeBackgroundColorPlain:$defaultActiveBackgroundColorPlain
+	),
+	primary:(
+		color:$primaryColor,
+		borderColor:$primaryBorderColor,
+		backgroundColor:$primaryBackgroundColor,
+		hoverColor:$primaryHoverColor,
+		hoverBorderColor:$primaryHoverBorderColor,
+		hoverBackgroundColor:$primaryHoverBackgroundColor,
+		activeColor:$primaryActiveColor,
+		activeBorderColor:$primaryActiveBorderColor,
+		activeBackgroundColor:$primaryActiveBackgroundColor,
+		colorPlain:$primaryColorPlain,
+		borderColorPlain:$primaryBorderColorPlain,
+		backgroundColorPlain:$primaryBackgroundColorPlain,
+		hoverColorPlain:$primaryHoverColorPlain,
+		hoverBorderColorPlain:$primaryHoverBorderColorPlain,
+		hoverBackgroundColorPlain:$primaryHoverBackgroundColorPlain,
+		activeColorPlain:$primaryActiveColorPlain,
+		activeBorderColorPlain:$primaryActiveBorderColorPlain,
+		activeBackgroundColorPlain:$primaryActiveBackgroundColorPlain
+	),
+	danger:(
+		color:$dangerColor,
+		borderColor:$dangerBorderColor,
+		backgroundColor:$dangerBackgroundColor,
+		hoverColor:$dangerHoverColor,
+		hoverBorderColor:$dangerHoverBorderColor,
+		hoverBackgroundColor:$dangerHoverBackgroundColor,
+		activeColor:$dangerActiveColor,
+		activeBorderColor:$dangerActiveBorderColor,
+		activeBackgroundColor:$dangerActiveBackgroundColor,
+		colorPlain:$dangerColorPlain,
+		borderColorPlain:$dangerBorderColorPlain,
+		backgroundColorPlain:$dangerBackgroundColorPlain,
+		hoverColorPlain:$dangerHoverColorPlain,
+		hoverBorderColorPlain:$dangerHoverBorderColorPlain,
+		hoverBackgroundColorPlain:$dangerHoverBackgroundColorPlain,
+		activeColorPlain:$dangerActiveColorPlain,
+		activeBorderColorPlain:$dangerActiveBorderColorPlain,
+		activeBackgroundColorPlain:$dangerActiveBackgroundColorPlain
+	),
+	warning:(
+		color:$warningColor,
+		borderColor:$warningBorderColor,
+		backgroundColor:$warningBackgroundColor,
+		hoverColor:$warningHoverColor,
+		hoverBorderColor:$warningHoverBorderColor,
+		hoverBackgroundColor:$warningHoverBackgroundColor,
+		activeColor:$warningActiveColor,
+		activeBorderColor:$warningActiveBorderColor,
+		activeBackgroundColor:$warningActiveBackgroundColor,
+		colorPlain:$warningColorPlain,
+		borderColorPlain:$warningBorderColorPlain,
+		backgroundColorPlain:$warningBackgroundColorPlain,
+		hoverColorPlain:$warningHoverColorPlain,
+		hoverBorderColorPlain:$warningHoverBorderColorPlain,
+		hoverBackgroundColorPlain:$warningHoverBackgroundColorPlain,
+		activeColorPlain:$warningActiveColorPlain,
+		activeBorderColorPlain:$warningActiveBorderColorPlain,
+		activeBackgroundColorPlain:$warningActiveBackgroundColorPlain
+	),
+	info:(
+		color:$infoColor,
+		borderColor:$infoBorderColor,
+		backgroundColor:$infoBackgroundColor,
+		hoverColor:$infoHoverColor,
+		hoverBorderColor:$infoHoverBorderColor,
+		hoverBackgroundColor:$infoHoverBackgroundColor,
+		activeColor:$infoActiveColor,
+		activeBorderColor:$infoActiveBorderColor,
+		activeBackgroundColor:$infoActiveBackgroundColor,
+		colorPlain:$infoColorPlain,
+		borderColorPlain:$infoBorderColorPlain,
+		backgroundColorPlain:$infoBackgroundColorPlain,
+		hoverColorPlain:$infoHoverColorPlain,
+		hoverBorderColorPlain:$infoHoverBorderColorPlain,
+		hoverBackgroundColorPlain:$infoHoverBackgroundColorPlain,
+		activeColorPlain:$infoActiveColorPlain,
+		activeBorderColorPlain:$infoActiveBorderColorPlain,
+		activeBackgroundColorPlain:$infoActiveBackgroundColorPlain
+	),
+	success:(
+		color:$successColor,
+		borderColor:$successBorderColor,
+		backgroundColor:$successBackgroundColor,
+		hoverColor:$successHoverColor,
+		hoverBorderColor:$successHoverBorderColor,
+		hoverBackgroundColor:$successHoverBackgroundColor,
+		activeColor:$successActiveColor,
+		activeBorderColor:$successActiveBorderColor,
+		activeBackgroundColor:$successActiveBackgroundColor,
+		colorPlain:$successColorPlain,
+		borderColorPlain:$successBorderColorPlain,
+		backgroundColorPlain:$successBackgroundColorPlain,
+		hoverColorPlain:$successHoverColorPlain,
+		hoverBorderColorPlain:$successHoverBorderColorPlain,
+		hoverBackgroundColorPlain:$successHoverBackgroundColorPlain,
+		activeColorPlain:$successActiveColorPlain,
+		activeBorderColorPlain:$successActiveBorderColorPlain,
+		activeBackgroundColorPlain:$successActiveBackgroundColorPlain
+	),
+	text:(
+		color:$textColor,
+		borderColor:$textBorderColor,
+		backgroundColor:$textBackgroundColor,
+		hoverColor:$textHoverColor,
+		hoverBorderColor:$textHoverBorderColor,
+		hoverBackgroundColor:$textHoverBackgroundColor,
+		activeColor:$textActiveColor,
+		activeBorderColor:$textActiveBorderColor,
+		activeBackgroundColor:$textActiveBackgroundColor,
+		colorPlain:$textColor,
+		borderColorPlain:$textBorderColor,
+		backgroundColorPlain:$textBackgroundColor,
+		hoverColorPlain:$textHoverColor,
+		hoverBorderColorPlain:$textHoverBorderColor,
+		hoverBackgroundColorPlain:$textHoverBackgroundColor,
+		activeColorPlain:$textActiveColor,
+		activeBorderColorPlain:$textActiveBorderColor,
+		activeBackgroundColorPlain:$textActiveBackgroundColor,
+	)
+);
+
+@each $key,$value in $buttonTypeMap {
+	.p-button-#{$key}{
+		color: map-get($value,'color');
+		background: map-get($value,'backgroundColor');
+		border-color:map-get($value,'borderColor');
+	}
+	.p-button-#{$key}:hover{
+		color: map-get($value,'hoverColor');
+		background: map-get($value,'hoverBackgroundColor');
+		border-color:map-get($value,'hoverBorderColor');
+	}
+	.p-button-#{$key}:active{
+		color: map-get($value,'activeColor');
+		background: map-get($value,'activeBackgroundColor');
+		border-color:map-get($value,'activeBorderColor');
+	}
+	.p-button-#{$key}.is-plain{
+		color: map-get($value,'colorPlain');
+		background: map-get($value,'backgroundColorPlain');
+		border-color:map-get($value,'borderColorPlain');
+	}
+	.p-button-#{$key}.is-plain:hover{
+		color: map-get($value,'hoverColorPlain');
+		background: map-get($value,'hoverBackgroundColorPlain');
+		border-color:map-get($value,'hoverBorderColorPlain');
+	}
+	.p-button-#{$key}.is-plain:active{
+		color: map-get($value,'activeColorPlain');
+		background: map-get($value,'activeBackgroundColorPlain');
+		border-color:map-get($value,'activeBorderColorPlain');
+	}
+}
+
+
+.p-button-size-medium{
+	padding: 10px 20px;
+	font-size: 14px;
+}
+.p-button-size-small{
+	padding: 7px 15px;
+	font-size: 12px;
+}
+.p-button-size-mini{
+	padding: 5px 12px;
+	font-size: 12px;
+}
+.p-button-size-medium{
+	padding: 10px 20px;
+	font-size: 14px;
+}
