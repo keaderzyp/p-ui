@@ -55,6 +55,7 @@ export default{
 						_this.$refs.input.value = '';
 						_this.inputStr = '';
 						_this.$emit('cc','')
+						_this.$emit('clear')
 					}
 				}
 			}),
