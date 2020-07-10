@@ -1,0 +1,74 @@
+@import '../../styles/base.scss';
+@import '../declares/p-button-declares.scss';
+.p-input{
+	display: inline-block;
+	padding: 0px;
+	border:none;
+	position: relative;
+	.fa{
+		position: absolute;
+		font-size: $baseFontSize;
+		color:$defaultBorderColor;
+		right: 10px;
+		top: 0px;
+		line-height: $defaultInputHeight;
+	}
+	.fa:hover{
+		color: $infoColorPlain;
+		cursor: pointer;
+	}
+	.p-input-clear{
+		visibility:hidden ;
+	}
+	.p-input--content{
+		-webkit-appearance: none;
+		background-color: #fff;
+		background-image: none;
+		border:1px solid $defaultBorderColor;
+		border-radius: 4px;
+		outline:none;
+		font-size: $baseFontSize;
+		padding: 0px 15px;
+		height: $defaultInputHeight;
+		line-height: $defaultInputHeight;
+		cursor: pointer;
+		transition: .2s;
+		color: $defaultColor;
+	}
+	.p-input--content:hover{
+		border-color: $defaultColor;
+	}
+	.p-input--content:focus{
+		border-color: $defaultActiveBorderColor;
+	}
+	.p-input--content:placeholder{
+		color:red
+	}
+	.p-input--content.is-disabled{
+		cursor: not-allowed;
+		background: $infoDisabledBackgroundColorPlain;
+	}
+	.p-input--content.is-disabled:hover{
+		border:1px solid $defaultBorderColor;
+	}
+}
+.p-input:hover{
+	.p-input-clear{
+		visibility:visible ;
+	}
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: $infoColorPlain;
+}
+
+input:-moz-placeholder, textarea:-moz-placeholder {
+  color: $infoColorPlain;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: $infoColorPlain;
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: $infoColorPlain;
+}

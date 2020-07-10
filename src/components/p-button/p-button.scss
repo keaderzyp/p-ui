@@ -11,7 +11,7 @@
 	cursor: pointer;
 	box-sizing: border-box;
 	margin-left: 10px;
-	font-size: 14px;
+	font-size: $baseFontSize;
 	padding: 12px 20px;
 	transition: .1s;
 	letter-spacing: 1;
@@ -19,8 +19,8 @@
 	line-height: 1;
 	.fa{
 		transform: scale(.8);
-		width: 14px;
-		height: 14px;
+		width: $baseFontSize;
+		height: $baseFontSize;
 	}
 	.p-btn-loading{
 		animation-name: btn-loading;
@@ -297,10 +297,10 @@ $buttonTypeMap:(
 
 .p-button-size-medium{
 	padding: 10px 20px;
-	font-size: 14px;
+	font-size: $mediumFontSize;
 	.fa{
-		width: 14px;
-		height: 14px;
+		width: $mediumFontSize;
+		height: $mediumFontSize;
 	}
 }
 .p-button-size-medium.is-circle{
@@ -309,26 +309,26 @@ $buttonTypeMap:(
 	
 }
 .p-button-size-small{
-	padding: 7px 15px;
-	font-size: 12px;
+	padding: 9px 15px;
+	font-size: $smallFontSize;
 	.fa{
-		width: 12px;
-		height: 12px;
+		width: $smallFontSize;
+		height: $smallFontSize;
 	}
 }
 .p-button-size-small.is-circle{
-	padding: 7px;
+	padding: 9px;
 	border-radius: 50%;
 }
 .p-button-size-mini{
-	padding: 5px 12px;
-	font-size: 12px;
+	padding: 7px 12px;
+	font-size: $miniFontSize;
 	.fa{
-		width: 12px;
-		height: 12px;
+		width: $miniFontSize;
+		height: $miniFontSize;
 	}
 }
 .p-button-size-mini.is-circle{
-	padding: 5px;
+	padding: 7px;
 	border-radius: 50%;
 }

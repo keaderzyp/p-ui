@@ -5,7 +5,8 @@ module.exports = {
 		'p-ui':'./src/p-ui.js',
 		'p-button':'./src/components/p-button/p-button-export.js',
 		'p-link':'./src/components/p-link/p-link-export.js',
-		'p-button-group':'./src/components/p-button-group/p-button-group-export.js'
+		'p-button-group':'./src/components/p-button-group/p-button-group-export.js',
+		'p-input':'./src/components/p-input/p-input-export.js',
 	},
 	mode:'production',
 	output:{

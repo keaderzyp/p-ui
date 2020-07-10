@@ -16,7 +16,6 @@
 		<p-button type="warning">123</p-button>
 		<p-button type="info">123</p-button>
 		<p-button type="default">123</p-button>
-		<i class="fa fa-address-book-o" aria-hidden="true"></i>
 		<br>
 		<p-button type="primary" size="default">123</p-button>
 		<p-button type="success" size="medium">123</p-button>
@@ -105,9 +104,10 @@
 			<p-button type="primary" >下一页</p-button>
 		</p-button-group>
 		<p-button-group >
-			<p-button type="primary"  >上一页</p-button>
-			<p-button type="primary"  >本页</p-button>
-			<p-button type="primary" >下一页</p-button>
+			<p-button type="primary" icon="fa-address-book-o" ></p-button>
+			<p-button type="primary" icon="fa-address-book-o" ></p-button>
+			<p-button type="primary" icon="fa-address-book-o"></p-button>
+			<div>sdf</div>
 		</p-button-group>
 	</div>
 </template>

@@ -11,7 +11,7 @@ export default{
 	render(h){
 		let _this = this;
 		let children = this.$slots.default.filter(item => {
-			return item.tag
+			return item.tag&&item.tag.indexOf('p-button')!=-1
 		})
 		return h('div',{
 			class:'p-button-group',
