@@ -40,7 +40,6 @@
 				<i class="fa fa-address-book-o" aria-hidden="true"></i>
 			</template>123
 		</p-button>
-		<p-button type="text" plain round>aaa</p-button>
 		<p-button type="success" plain round icon="fa-address-book-o">123</p-button>
 		<p-button type="danger" plain round icon="fa-address-book-o">123</p-button>
 		<p-button type="warning" plain round>123</p-button>
@@ -83,12 +82,33 @@
 				<i class="fa fa-address-book-o" aria-hidden="true"></i>
 			</template>123
 		</p-button>
-		<p-button type="text" circle plain>aaa</p-button>
 		<p-button type="success" circle plain icon="fa-address-book-o">123</p-button>
 		<p-button type="danger" circle plain icon="fa-address-book-o">123</p-button>
 		<p-button type="warning" circle plain>123</p-button>
 		<p-button type="info" circle plain>123</p-button>
 		<p-button type="default" circle plain>123</p-button>
+		<br>
+		<p-button-group size="mini">
+			<p-button type="warning"  >上一页</p-button>
+			<p-button type="info"  >本页</p-button>
+			<p-button type="default" >下一页</p-button>
+		</p-button-group>
+		
+		<p-button-group size="small">
+			<p-button type="primary"  >上一页</p-button>
+			<p-button type="primary"  >本页</p-button>
+			<p-button type="primary" >下一页</p-button>
+		</p-button-group>
+		<p-button-group size="medium">
+			<p-button type="primary"  >上一页</p-button>
+			<p-button type="primary"  >本页</p-button>
+			<p-button type="primary" >下一页</p-button>
+		</p-button-group>
+		<p-button-group >
+			<p-button type="primary"  >上一页</p-button>
+			<p-button type="primary"  >本页</p-button>
+			<p-button type="primary" >下一页</p-button>
+		</p-button-group>
 	</div>
 </template>
 

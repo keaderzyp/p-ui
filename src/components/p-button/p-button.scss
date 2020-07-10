@@ -3,11 +3,13 @@
 @import '../declares/p-button-declares.scss';
 
 .p-button{
+	display: inline-block;
 	border-radius: 4px;
 	outline: none;
 	border:1px solid $defaultFontColor;
 	color:$defaultFontColor;
 	cursor: pointer;
+	box-sizing: border-box;
 	margin-left: 10px;
 	font-size: 14px;
 	padding: 12px 20px;

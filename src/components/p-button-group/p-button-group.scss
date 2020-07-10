@@ -1,0 +1,30 @@
+.p-button-group{
+	display: inline-block;
+	vertical-align: middle;
+	.p-button{
+		margin: 0;
+		letter-spacing: 0;
+		float: left;
+		border-radius: 0px;
+	}
+	&:after{
+		content: '.';
+		display: block;
+		clear: both;
+		width: 0;
+		height: 0;
+		visibility: hidden;
+	}
+	.p-button:nth-child(1){
+		border-radius: 4px 0px 0px 4px;
+	}
+	.p-button:last-child{
+		border-radius: 0px 4px 4px 0px;
+	}
+	
+	
+	.p-button:not(:first-child){
+		margin-left: -1px;
+		border-left: 1px solid #fff;
+	}
+}
