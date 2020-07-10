@@ -51,10 +51,42 @@
 	.p-input--content.is-disabled:hover{
 		border:1px solid $defaultBorderColor;
 	}
+	.p-input--content.p-input-size--medium{
+		font-size:$mediumFontSize;
+		line-height: $mediumInputHeight;
+		height: $mediumInputHeight;
+	}
+	.p-input--content.p-input-size--small{
+		font-size:$smallFontSize;
+		line-height: $smallInputHeight;
+		height: $smallInputHeight;
+		
+	}
+	.p-input--content.p-input-size--mini{
+		font-size:$miniFontSize;
+		line-height: $miniInputHeight;
+		height: $miniInputHeight;
+		
+	}
 }
 .p-input:hover{
 	.p-input-clear{
 		visibility:visible ;
+	}
+}
+.p-input-medium{
+	.fa{
+		line-height: $mediumInputHeight;
+	}
+}
+.p-input-small{
+	.fa{
+		line-height: $smallInputHeight;
+	}
+}
+.p-input-mini{
+	.fa{
+		line-height: $miniInputHeight;
 	}
 }
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {

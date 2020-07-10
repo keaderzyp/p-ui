@@ -26,17 +26,17 @@ export default{
 			required:false,
 			type:Boolean,
 			default:false
+		},
+		size:{
+			required:false,
+			type:String,
+			default:'default'
 		}
 	},
 	data(){
 		return{
 			inputStr:'',
 			focused:false,
-		}
-	},
-	watch:{
-		value(v){
-			console.log(v)
 		}
 	},
 	model:{
@@ -46,19 +46,20 @@ export default{
 	render(h){
 		let _this = this;
 		return h('div',{
-			class:'p-input'
+			class:`p-input p-input-${this.size}`
 		},[
-			this.clearable&&this.value.length>0&&h('i',{
-				class:'fa fa-times-circle-o p-input-clear',
+			this.clearable&&this.inputStr.length>0&&h('i',{
+				class:`fa fa-times-circle-o p-input-clear`,
 				on:{
 					click(){
 						_this.$refs.input.value = '';
+						_this.inputStr = '';
 						_this.$emit('cc','')
 					}
 				}
 			}),
 			h('input',{
-				class:`p-input--content ${this.disabled?'is-disabled':''}`,
+				class:`p-input--content ${this.disabled?'is-disabled':''} p-input-size--${this.size}`,
 				attrs:{
 					placeholder:this.placeholder,
 					disabled:this.disabled?'disabled':undefined,
