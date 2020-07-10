@@ -5,6 +5,7 @@
 	padding: 0px;
 	border:none;
 	position: relative;
+	height: $defaultInputHeight;
 	.fa{
 		position: absolute;
 		font-size: $baseFontSize;
@@ -12,6 +13,7 @@
 		right: 10px;
 		top: 0px;
 		line-height: $defaultInputHeight;
+		height: 100%;
 	}
 	.fa:hover{
 		color: $infoColorPlain;
@@ -75,16 +77,19 @@
 	}
 }
 .p-input-medium{
+	height: $mediumInputHeight;
 	.fa{
 		line-height: $mediumInputHeight;
 	}
 }
 .p-input-small{
+	height: $smallInputHeight;
 	.fa{
 		line-height: $smallInputHeight;
 	}
 }
 .p-input-mini{
+	height: $miniInputHeight;
 	.fa{
 		line-height: $miniInputHeight;
 	}
