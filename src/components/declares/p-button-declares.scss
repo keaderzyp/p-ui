@@ -8,6 +8,9 @@ $defaultHoverColor:#409eff;
 $defaultActiveColor:#3a8ee6;
 $defaultActiveBackgroundColor:$defaultHoverBackgroundColor;
 $defaultActiveBorderColor:#3a8ee6;
+$defaultDisabledColor:#c0c4cc;
+$defaultDisabledBorderColor:#ebeef5;
+$defaultDisabledBackgroundColor:#fff;
 
 $primaryBackgroundColor:$primary;
 $primaryColor:$whitFontColor;
@@ -18,6 +21,9 @@ $primaryHoverColor:$whitFontColor;
 $primaryActiveBackgroundColor:#3a8ee6;
 $primaryActiveBorderColor:#3a8ee6;
 $primaryActiveColor:$whitFontColor;
+$primaryDisabledColor:#fff;
+$primaryDisabledBorderColor:#a0cfff;
+$primaryDisabledBackgroundColor:#a0cfff;
 
 $successColor:$whitFontColor;
 $successBackgroundColor:$success;
@@ -28,6 +34,9 @@ $successHoverColor:$whitFontColor;
 $successActiveColor:$whitFontColor;
 $successActiveBackgroundColor:#5daf34;
 $successActiveBorderColor:#5daf34;
+$successDisabledColor:#fff;
+$successDisabledBorderColor:#b3e19d;
+$successDisabledBackgroundColor:#b3e19d;
 
 $warningColor:$whitFontColor;
 $warningBackgroundColor:$warning;
@@ -38,6 +47,9 @@ $warningHoverColor:$whitFontColor;
 $warningActiveColor:$whitFontColor;
 $warningActiveBackgroundColor:#cf9236;
 $warningActiveBorderColor:#cf9236;
+$warningDisabledColor:#fff;
+$warningDisabledBorderColor:#f3d19e;
+$warningDisabledBackgroundColor:#f3d19e;
 
 $dangerColor:$whitFontColor;
 $dangerBackgroundColor:$danger;
@@ -48,6 +60,9 @@ $dangerHoverColor:$whitFontColor;
 $dangerActiveColor:$whitFontColor;
 $dangerActiveBackgroundColor:#dd6161;
 $dangerActiveBorderColor:#dd6161;
+$dangerDisabledColor:#fff;
+$dangerDisabledBorderColor:#fab6b6;
+$dangerDisabledBackgroundColor:#fab6b6;
 
 $infoColor:$whitFontColor;
 $infoBackgroundColor:$info;
@@ -58,6 +73,9 @@ $infoHoverColor:$whitFontColor;
 $infoActiveColor:$whitFontColor;
 $infoActiveBackgroundColor:#82848a;
 $infoActiveBorderColor:#82848a;
+$infoDisabledColor:#fff;
+$infoDisabledBorderColor:#c8c9cc;
+$infoDisabledBackgroundColor:#c8c9cc;
 
 $textColor:#409eff;
 $textBackgroundColor:rgba(0,0,0,0);
@@ -68,6 +86,9 @@ $textHoverColor:#66b1ff;
 $textActiveColor:#3a8ee6;
 $textActiveBackgroundColor:rgba(0,0,0,0);
 $textActiveBorderColor:rgba(0,0,0,0);
+$textDisabledColor:#c0c4cc;
+$textDisabledBorderColor:#ebeef5;
+$textDisabledBackgroundColor:#fff;
 
 $defaultColorPlain:#606266;
 $defaultBorderColorPlain:#dcdfe6;
@@ -78,6 +99,9 @@ $defaultHoverColorPlain:#409eff;
 $defaultActiveColorPlain:#3a8ee6;
 $defaultActiveBackgroundColorPlain:$defaultHoverBackgroundColor;
 $defaultActiveBorderColorPlain:#3a8ee6;
+$defaultDisabledColorPlain:#c0c4cc;
+$defaultDisabledBorderColorPlain:#ebeef5;
+$defaultDisabledBackgroundColorPlain:#fff;
 
 $primaryBackgroundColorPlain:#ecf5ff;
 $primaryColorPlain:#409eff;
@@ -88,6 +112,9 @@ $primaryHoverColorPlain:$whitFontColor;
 $primaryActiveBackgroundColorPlain:#3a8ee6;
 $primaryActiveBorderColorPlain:#3a8ee6;
 $primaryActiveColorPlain:$whitFontColor;
+$primaryDisabledColorPlain:#8cc5ff;
+$primaryDisabledBorderColorPlain:#d9ecff;
+$primaryDisabledBackgroundColorPlain:#ecf5ff;
 
 $successColorPlain:#67c23a;
 $successBackgroundColorPlain:#f0f9eb;
@@ -98,6 +125,9 @@ $successHoverColorPlain:$whitFontColor;
 $successActiveColorPlain:$whitFontColor;
 $successActiveBackgroundColorPlain:#5daf34;
 $successActiveBorderColorPlain:#5daf34;
+$successDisabledColorPlain:#a4da89;
+$successDisabledBorderColorPlain:#e1f3d8;
+$successDisabledBackgroundColorPlain:#f0f9eb;
 
 $warningColorPlain:#e6a23c;
 $warningBackgroundColorPlain:#fdf6ec;
@@ -108,6 +138,9 @@ $warningHoverColorPlain:$whitFontColor;
 $warningActiveColorPlain:$whitFontColor;
 $warningActiveBackgroundColorPlain:#cf9236;
 $warningActiveBorderColorPlain:#cf9236;
+$warningDisabledColorPlain:#f0c78a;
+$warningDisabledBorderColorPlain:#faecd8;
+$warningDisabledBackgroundColorPlain:#fdf6ec;
 
 $dangerColorPlain:#f56c6c;
 $dangerBackgroundColorPlain:#fef0f0;
@@ -118,6 +151,9 @@ $dangerHoverColorPlain:$whitFontColor;
 $dangerActiveColorPlain:$whitFontColor;
 $dangerActiveBackgroundColorPlain:#dd6161;
 $dangerActiveBorderColorPlain:#dd6161;
+$dangerDisabledColorPlain:#f9a7a7;
+$dangerDisabledBorderColorPlain:#fde2e2;
+$dangerDisabledBackgroundColorPlain:#fef0f0;
 
 $infoColorPlain:#909399;
 $infoBackgroundColorPlain:#f4f4f5;
@@ -128,3 +164,6 @@ $infoHoverColorPlain:$whitFontColor;
 $infoActiveColorPlain:$whitFontColor;
 $infoActiveBackgroundColorPlain:#82848a;
 $infoActiveBorderColorPlain:#82848a;
+$infoDisabledColorPlain:#bcbec2;
+$infoDisabledBorderColorPlain:#e9e9eb;
+$infoDisabledBackgroundColorPlain:#f4f4f5;

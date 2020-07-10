@@ -31,6 +31,21 @@ export default {
 			required:false,
 			type:Boolean,
 			default:false
+		},
+		round:{
+			required:false,
+			type:Boolean,
+			default:false
+		},
+		disabled:{
+			required:false,
+			type:Boolean,
+			default:false
+		},
+		circle:{
+			required:false,
+			type:Boolean,
+			default:false
 		}
 	},
 	render(h){
@@ -53,9 +68,10 @@ export default {
 			}
 		}
 		return h('button',{
-			class:`p-button p-button-${this.type} p-button-size-${this.size} ${this.plain?'is-plain':''}`,
+			class:`p-button p-button-${this.type} p-button-size-${this.size} ${this.disabled?'is-disabled':''} ${this.round?'is-round':''} ${this.circle?'is-circle':''} ${this.plain?'is-plain':''}`,
 			attrs:{
-				type:this.nativeType
+				type:this.nativeType,
+				disabled:this.disabled?'disabled':undefined
 			},
 			on:{
 				click(){
@@ -63,7 +79,7 @@ export default {
 				}
 			}
 		},[
-			renderIcon(),h('span',{},this.$slots.default)
+			renderIcon(),this.circle?undefined:h('span',{},this.$slots.default)
 		])
 	}
 }

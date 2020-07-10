@@ -1,6 +1,6 @@
 @import '../../styles/css/font-awesome.min.css';
 @import '../../styles/base.scss';
-@import './p-button-declares.scss';
+@import '../declares/p-button-declares.scss';
 
 .p-button{
 	border-radius: 4px;
@@ -12,8 +12,13 @@
 	font-size: 14px;
 	padding: 12px 20px;
 	transition: .1s;
+	letter-spacing: 1;
+	white-space: nowrap;
+	line-height: 1;
 	.fa{
 		transform: scale(.8);
+		width: 14px;
+		height: 14px;
 	}
 	.p-btn-loading{
 		animation-name: btn-loading;
@@ -29,6 +34,13 @@
 	to{
 		transform:scale(.8) rotate(360deg);
 	}
+}
+.p-button.is-round{
+	border-radius: 200px;
+}
+.p-button.is-circle{
+	border-radius: 50%;
+	padding: 12px;
 }
 $buttonTypeMap:(
 	default:(
@@ -49,7 +61,13 @@ $buttonTypeMap:(
 		hoverBackgroundColorPlain:$defaultHoverBackgroundColorPlain,
 		activeColorPlain:$defaultActiveColorPlain,
 		activeBorderColorPlain:$defaultActiveBorderColorPlain,
-		activeBackgroundColorPlain:$defaultActiveBackgroundColorPlain
+		activeBackgroundColorPlain:$defaultActiveBackgroundColorPlain,
+		disabledColor:$defaultDisabledColor,
+		disabledBorderColor:$defaultDisabledBorderColor,
+		disabledBackgroundColor:$defaultDisabledBackgroundColor,
+		disabledColorPlain:$defaultDisabledColorPlain,
+		disabledBorderColorPlain:$defaultDisabledBorderColorPlain,
+		disabledBackgroundColorPlain:$defaultDisabledBackgroundColorPlain
 	),
 	primary:(
 		color:$primaryColor,
@@ -69,7 +87,14 @@ $buttonTypeMap:(
 		hoverBackgroundColorPlain:$primaryHoverBackgroundColorPlain,
 		activeColorPlain:$primaryActiveColorPlain,
 		activeBorderColorPlain:$primaryActiveBorderColorPlain,
-		activeBackgroundColorPlain:$primaryActiveBackgroundColorPlain
+		activeBackgroundColorPlain:$primaryActiveBackgroundColorPlain,
+		disabledColor:$primaryDisabledColor,
+		disabledBorderColor:$primaryDisabledBorderColor,
+		disabledBackgroundColor:$primaryDisabledBackgroundColor,
+		disabledColorPlain:$primaryDisabledColorPlain,
+		disabledBorderColorPlain:$primaryDisabledBorderColorPlain,
+		disabledBackgroundColorPlain:$primaryDisabledBackgroundColorPlain
+		
 	),
 	danger:(
 		color:$dangerColor,
@@ -89,7 +114,13 @@ $buttonTypeMap:(
 		hoverBackgroundColorPlain:$dangerHoverBackgroundColorPlain,
 		activeColorPlain:$dangerActiveColorPlain,
 		activeBorderColorPlain:$dangerActiveBorderColorPlain,
-		activeBackgroundColorPlain:$dangerActiveBackgroundColorPlain
+		activeBackgroundColorPlain:$dangerActiveBackgroundColorPlain,
+		disabledColor:$dangerDisabledColor,
+		disabledBorderColor:$dangerDisabledBorderColor,
+		disabledBackgroundColor:$dangerDisabledBackgroundColor,
+		disabledColorPlain:$dangerDisabledColorPlain,
+		disabledBorderColorPlain:$dangerDisabledBorderColorPlain,
+		disabledBackgroundColorPlain:$dangerDisabledBackgroundColorPlain
 	),
 	warning:(
 		color:$warningColor,
@@ -109,7 +140,13 @@ $buttonTypeMap:(
 		hoverBackgroundColorPlain:$warningHoverBackgroundColorPlain,
 		activeColorPlain:$warningActiveColorPlain,
 		activeBorderColorPlain:$warningActiveBorderColorPlain,
-		activeBackgroundColorPlain:$warningActiveBackgroundColorPlain
+		activeBackgroundColorPlain:$warningActiveBackgroundColorPlain,
+		disabledColor:$warningDisabledColor,
+		disabledBorderColor:$warningDisabledBorderColor,
+		disabledBackgroundColor:$warningDisabledBackgroundColor,
+		disabledColorPlain:$warningDisabledColorPlain,
+		disabledBorderColorPlain:$warningDisabledBorderColorPlain,
+		disabledBackgroundColorPlain:$warningDisabledBackgroundColorPlain
 	),
 	info:(
 		color:$infoColor,
@@ -129,7 +166,13 @@ $buttonTypeMap:(
 		hoverBackgroundColorPlain:$infoHoverBackgroundColorPlain,
 		activeColorPlain:$infoActiveColorPlain,
 		activeBorderColorPlain:$infoActiveBorderColorPlain,
-		activeBackgroundColorPlain:$infoActiveBackgroundColorPlain
+		activeBackgroundColorPlain:$infoActiveBackgroundColorPlain,
+		disabledColor:$infoDisabledColor,
+		disabledBorderColor:$infoDisabledBorderColor,
+		disabledBackgroundColor:$infoDisabledBackgroundColor,
+		disabledColorPlain:$infoDisabledColorPlain,
+		disabledBorderColorPlain:$infoDisabledBorderColorPlain,
+		disabledBackgroundColorPlain:$infoDisabledBackgroundColorPlain
 	),
 	success:(
 		color:$successColor,
@@ -149,7 +192,13 @@ $buttonTypeMap:(
 		hoverBackgroundColorPlain:$successHoverBackgroundColorPlain,
 		activeColorPlain:$successActiveColorPlain,
 		activeBorderColorPlain:$successActiveBorderColorPlain,
-		activeBackgroundColorPlain:$successActiveBackgroundColorPlain
+		activeBackgroundColorPlain:$successActiveBackgroundColorPlain,
+		disabledColor:$successDisabledColor,
+		disabledBorderColor:$successDisabledBorderColor,
+		disabledBackgroundColor:$successDisabledBackgroundColor,
+		disabledColorPlain:$successDisabledColorPlain,
+		disabledBorderColorPlain:$successDisabledBorderColorPlain,
+		disabledBackgroundColorPlain:$successDisabledBackgroundColorPlain
 	),
 	text:(
 		color:$textColor,
@@ -170,6 +219,12 @@ $buttonTypeMap:(
 		activeColorPlain:$textActiveColor,
 		activeBorderColorPlain:$textActiveBorderColor,
 		activeBackgroundColorPlain:$textActiveBackgroundColor,
+		disabledColor:$textDisabledColor,
+		disabledBorderColor:$textDisabledBorderColor,
+		disabledBackgroundColor:$textDisabledBackgroundColor,
+		disabledColorPlain:$textDisabledColor,
+		disabledBorderColorPlain:$textDisabledBorderColor,
+		disabledBackgroundColorPlain:$textDisabledBackgroundColor
 	)
 );
 
@@ -179,30 +234,61 @@ $buttonTypeMap:(
 		background: map-get($value,'backgroundColor');
 		border-color:map-get($value,'borderColor');
 	}
+	.p-button-#{$key}.is-disabled{
+		color: map-get($value,'disabledColor');
+		background: map-get($value,'disabledBackgroundColor');
+		border-color:map-get($value,'disabledBorderColor');
+		cursor: not-allowed;
+	}
 	.p-button-#{$key}:hover{
 		color: map-get($value,'hoverColor');
 		background: map-get($value,'hoverBackgroundColor');
 		border-color:map-get($value,'hoverBorderColor');
+	}
+	.p-button-#{$key}.is-disabled:hover{
+		color: map-get($value,'disabledColor');
+		background: map-get($value,'disabledBackgroundColor');
+		border-color:map-get($value,'disabledBorderColor');
 	}
 	.p-button-#{$key}:active{
 		color: map-get($value,'activeColor');
 		background: map-get($value,'activeBackgroundColor');
 		border-color:map-get($value,'activeBorderColor');
 	}
+	.p-button-#{$key}.is-disabled:active{
+		color: map-get($value,'disabledColor');
+		background: map-get($value,'disabledBackgroundColor');
+		border-color:map-get($value,'disabledBorderColor');
+	}
 	.p-button-#{$key}.is-plain{
 		color: map-get($value,'colorPlain');
 		background: map-get($value,'backgroundColorPlain');
 		border-color:map-get($value,'borderColorPlain');
+	}
+	.p-button-#{$key}.is-disabled.is-plain{
+		color: map-get($value,'disabledColorPlain');
+		background: map-get($value,'disabledBackgroundColorPlain');
+		border-color:map-get($value,'disabledBorderColorPlain');
 	}
 	.p-button-#{$key}.is-plain:hover{
 		color: map-get($value,'hoverColorPlain');
 		background: map-get($value,'hoverBackgroundColorPlain');
 		border-color:map-get($value,'hoverBorderColorPlain');
 	}
+	.p-button-#{$key}.is-disabled.is-plain:hover{
+		color: map-get($value,'disabledColorPlain');
+		background: map-get($value,'disabledBackgroundColorPlain');
+		border-color:map-get($value,'disabledBorderColorPlain');
+	}
 	.p-button-#{$key}.is-plain:active{
 		color: map-get($value,'activeColorPlain');
 		background: map-get($value,'activeBackgroundColorPlain');
 		border-color:map-get($value,'activeBorderColorPlain');
+	}
+	.p-button-#{$key}.is-disabled.is-plain:active{
+		color: map-get($value,'disabledColorPlain');
+		background: map-get($value,'disabledBackgroundColorPlain');
+		border-color:map-get($value,'disabledBorderColorPlain');
 	}
 }
 
@@ -210,16 +296,37 @@ $buttonTypeMap:(
 .p-button-size-medium{
 	padding: 10px 20px;
 	font-size: 14px;
+	.fa{
+		width: 14px;
+		height: 14px;
+	}
+}
+.p-button-size-medium.is-circle{
+	padding: 10px;
+	border-radius: 50%;
+	
 }
 .p-button-size-small{
 	padding: 7px 15px;
 	font-size: 12px;
+	.fa{
+		width: 12px;
+		height: 12px;
+	}
+}
+.p-button-size-small.is-circle{
+	padding: 7px;
+	border-radius: 50%;
 }
 .p-button-size-mini{
 	padding: 5px 12px;
 	font-size: 12px;
+	.fa{
+		width: 12px;
+		height: 12px;
+	}
 }
-.p-button-size-medium{
-	padding: 10px 20px;
-	font-size: 14px;
+.p-button-size-mini.is-circle{
+	padding: 5px;
+	border-radius: 50%;
 }
