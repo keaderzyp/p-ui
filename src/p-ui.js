@@ -1,7 +1,9 @@
 import './index.scss';
 import PButton from './components/p-button/p-button-export.js'
+import PLink from './components/p-link/p-link-export.js'
 const componentsArr = [
-	PButton
+	PButton,
+	PLink
 ]
 const install = Vue => {
 	componentsArr.forEach(component => {
@@ -10,8 +12,10 @@ const install = Vue => {
 }
 export default {
 	install,
-	PButton
+	PButton,
+	PLink
 }
 export {
-	PButton
+	PButton,
+	PLink
 }

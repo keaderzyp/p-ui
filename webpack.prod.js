@@ -3,7 +3,8 @@ var MiniCssExtractPlugin = require('mini-css-extract-plugin')
 module.exports = {
 	entry:{
 		'p-ui':'./src/p-ui.js',
-		'p-button':'./src/components/p-button/p-button-export.js'
+		'p-button':'./src/components/p-button/p-button-export.js',
+		'p-link':'./src/components/p-link/p-link-export.js'
 	},
 	mode:'production',
 	output:{

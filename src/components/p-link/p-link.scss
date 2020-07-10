@@ -1,0 +1,72 @@
+@import '../../styles/css/font-awesome.min.css';
+@import '../../styles/base.scss';
+@import '../declares/p-button-declares.scss';
+.p-link{
+	display: inline-flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	vertical-align: middle;
+	position: relative;
+	text-decoration: none;
+	outline: none;
+	cursor: pointer;
+	padding: 0;
+	font-size: 14px;
+	font-weight: 500;
+}
+$typeMap:(
+	primary:(
+		color:$primary,
+		disableColor:$primaryDisabledColor,
+		hoverColor:$primaryHoverBackgroundColor,
+		disabledColor:$primaryDisabledBackgroundColor,
+	),
+	default:(
+		color:$defaultFontColor,
+		disableColor:$defaultDisabledColor,
+		hoverColor:$defaultHoverColor,
+		disabledColor:$defaultDisabledColor,
+	),
+	info:(
+		color:$info,
+		disableColor:$infoDisabledColor,
+		hoverColor:$infoHoverBackgroundColor,
+		disabledColor:$infoDisabledBackgroundColor,
+	),
+	success:(
+		color:$success,
+		disableColor:$successDisabledColor,
+		hoverColor:$successHoverBackgroundColor,
+		disabledColor:$successDisabledBackgroundColor,
+	),
+	warning:(
+		color:$warning,
+		disableColor:$warningDisabledColor,
+		hoverColor:$warningHoverBackgroundColor,
+		disabledColor:$warningDisabledBackgroundColor,
+	),
+	danger:(
+		color:$danger,
+		disableColor:$dangerDisabledColor,
+		hoverColor:$dangerHoverBackgroundColor,
+		disabledColor:$dangerDisabledBackgroundColor,
+	)
+);
+@each $key,$value in $typeMap {
+	.p-link-#{$key}{
+		color:map-get($value,'color')
+	}
+	.p-link-#{$key}.is-disabled{
+		color:map-get($value,'disabledColor')
+	}
+	.p-link-#{$key}:hover{
+		color:map-get($value,'hoverColor');
+		text-decoration:underline
+	}
+	.p-link-#{$key}.is-disabled:hover{
+		color:map-get($value,'disabledColor');
+		text-decoration:none;
+		cursor:not-allowed;
+	}
+}
