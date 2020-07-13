@@ -37,6 +37,7 @@ export default{
 		return{
 			inputStr:'',
 			focused:false,
+			appended:false
 		}
 	},
 	model:{
@@ -45,6 +46,13 @@ export default{
 	},
 	render(h){
 		let _this = this;
+		let appended = false;
+		if(this.clearable&&this.inputStr.length>0){
+			appended = true;
+		}else{
+			appended = false;
+		}
+		this.appended = appended;
 		return h('div',{
 			class:`p-input p-input-${this.size}`
 		},[
@@ -60,7 +68,7 @@ export default{
 				}
 			}),
 			h('input',{
-				class:`p-input--content ${this.disabled?'is-disabled':''} p-input-size--${this.size}`,
+				class:`p-input--content ${this.disabled?'is-disabled':''} ${this.appended?'p-input-appended':''} p-input-size--${this.size}`,
 				attrs:{
 					placeholder:this.placeholder,
 					disabled:this.disabled?'disabled':undefined,

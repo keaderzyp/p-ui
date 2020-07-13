@@ -20,11 +20,15 @@
 		cursor: pointer;
 	}
 	.p-input-clear{
+		width: 25px;
+		text-align: center;
 		visibility:hidden ;
 	}
 	.p-input--content{
 		-webkit-appearance: none;
+		width: 178px;
 		background-color: #fff;
+		box-sizing: border-box;
 		background-image: none;
 		border:1px solid $defaultBorderColor;
 		border-radius: 4px;
@@ -69,6 +73,9 @@
 		line-height: $miniInputHeight;
 		height: $miniInputHeight;
 		
+	}
+	.p-input-appended{
+		padding-right: 40px;
 	}
 }
 .p-input:hover{
