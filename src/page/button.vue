@@ -5,6 +5,7 @@
 				<i class="fa fa-arrow-left"></i>返回
 			</p-link>
 		</div>
+		<!-- {{$store.state.hello}} -->
 		<p-button type="primary" :loading="loading"  @click="handleClick(123)">
 			<template v-slot:icon>
 				<i class="fa fa-address-book-o" aria-hidden="true"></i>
@@ -123,9 +124,13 @@
 				loading:false
 			}
 		},
+		created(){
+			console.log(this.$store)
+		},
 		methods:{
 			handleClick(arg){
 				this.loading = true;
+				this.$store.state.hello = 'hello1'
 				let _this = this;
 				setTimeout(() => {
 					_this.loading = false;

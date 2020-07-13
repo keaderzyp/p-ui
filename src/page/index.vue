@@ -1,5 +1,6 @@
 <template>
 	<div>
+		<!-- {{$store.state.hello}} -->
 		<ol>
 			<li>
 				<p-link router="/button" >按钮</p-link>
