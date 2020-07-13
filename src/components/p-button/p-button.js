@@ -68,14 +68,16 @@ export default {
 			}
 		}
 		return h('button',{
-			class:`p-button p-button-${this.type} p-button-size-${this.size} ${this.disabled?'is-disabled':''} ${this.round?'is-round':''} ${this.circle?'is-circle':''} ${this.plain?'is-plain':''}`,
+			class:`p-button p-button-${this.type} p-button-size-${this.size} ${this.disabled?'is-disabled':''} ${this.round?'is-round':''} ${this.circle?'is-circle':''} ${this.plain?'is-plain':''} ${this.loading?'is-loading':''}`,
 			attrs:{
 				type:this.nativeType,
 				disabled:this.disabled?'disabled':undefined
 			},
 			on:{
 				click(){
-					_this.$emit('click',...arguments)
+					if(!_this.loading){
+						_this.$emit('click',...arguments)
+					}
 				}
 			}
 		},[

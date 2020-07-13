@@ -22,17 +22,17 @@
 		<p-button type="danger" size="small">123</p-button>
 		<p-button type="default" size="mini">123</p-button>
 		<br>
-		<p-button type="primary" plain>
+		<p-button type="primary" :loading="loading" plain>
 			<template v-slot:icon>
 				<i class="fa fa-address-book-o" aria-hidden="true"></i>
 			</template>123
 		</p-button>
-		<p-button type="text" plain>aaa</p-button>
-		<p-button type="success" plain icon="fa-address-book-o">123</p-button>
-		<p-button type="danger" plain icon="fa-address-book-o">123</p-button>
-		<p-button type="warning" plain>123</p-button>
-		<p-button type="info" plain>123</p-button>
-		<p-button type="default" plain>123</p-button>
+		<p-button type="text" :loading="loading" plain>aaa</p-button>
+		<p-button type="success" :loading="loading" plain icon="fa-address-book-o">123</p-button>
+		<p-button type="danger" :loading="loading" plain icon="fa-address-book-o">123</p-button>
+		<p-button type="warning" :loading="loading" plain>123</p-button>
+		<p-button type="info" :loading="loading" plain>123</p-button>
+		<p-button type="default" :loading="loading" plain>123</p-button>
 		<br>
 		<p-button type="primary" plain round >
 			<template v-slot:icon>
@@ -125,8 +125,11 @@
 		},
 		methods:{
 			handleClick(arg){
-				console.log(arg)
-				this.loading = !this.loading;
+				this.loading = true;
+				let _this = this;
+				setTimeout(() => {
+					_this.loading = false;
+				},1000)
 			}
 		}
 	}

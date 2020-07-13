@@ -292,6 +292,16 @@ $buttonTypeMap:(
 		background: map-get($value,'disabledBackgroundColorPlain');
 		border-color:map-get($value,'disabledBorderColorPlain');
 	}
+	.p-button-#{$key}.is-loading{
+		color: map-get($value,'disabledColor');
+		background: map-get($value,'disabledBackgroundColor');
+		border-color:map-get($value,'disabledBorderColor');
+	}
+	.p-button-#{$key}.is-plain.is-loading{
+		color: map-get($value,'disabledColor');
+		background: map-get($value,'disabledBackgroundColor');
+		border-color:map-get($value,'disabledBorderColor');
+	}
 }
 
 
