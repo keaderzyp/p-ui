@@ -133,6 +133,7 @@ export default{
 		let _this = this;
 		
 		let renderInput = () => {
+			
 			let cleared = false;
 			if(_this.clearable&&_this.inputStr.length>0){
 				cleared = true;
@@ -149,6 +150,7 @@ export default{
 			}else{
 				_this.appended = false;
 			}
+			
 			return [
 				_this.prepended?h('i',{class:`fa ${_this.prefixIcon} p-input-prefix`}):undefined,
 				h('input',{
@@ -202,8 +204,8 @@ export default{
 				}):undefined
 			]
 		}
+		
 		let renderTextarea = () => {
-			
 			return [h('textarea',{
 				class:`p-textarea--content ${_this.disabled?'is-disabled':''} p-textarea-resize-${_this.resize} p-textarea-size--${_this.size}`,
 				attrs:{
@@ -213,7 +215,9 @@ export default{
 					readonly:_this.readonly?'readonly':undefined,
 					autofocus:_this.autofocus?'autofocus':undefined,
 					type:_this.type,
-					name:_this.name
+					name:_this.name,
+					maxlength:_this.maxlength>-1?_this.maxlength:undefined,
+					minlength:_this.minlength>-1?_this.minlength:undefined,
 				},
 				ref:'textarea',
 				on:{
@@ -239,8 +243,42 @@ export default{
 				}
 			},_this.value)]
 		}
-		return h('div',{
+		let renderTarget = h('div',{
 			class:`${this.type!='textarea'?'p-input':'p-textarea'} p-${this.type!='textarea'?'input':'textarea'}-${_this.size}`
-		},this.type!='textarea'?renderInput():renderTextarea())
+		},this.type!='textarea'?renderInput():renderTextarea());
+		if(this.type=='text'&&(this.$slots.prepend||this.$slots.append)){
+			let prependObj = this.$slots.prepend?this.$slots.prepend[0]:undefined;
+			let renderPrepend
+			if(prependObj&&prependObj.tag){
+				prependObj.componentOptions.propsData.size = _this.size
+				renderPrepend = [prependObj]
+			}else{
+				renderPrepend = h('div',{
+					class:`p-input--prepend p-input-size--${_this.size}`
+				},[prependObj])
+			}
+			
+			let appendObj = this.$slots.append?this.$slots.append[0]:undefined;
+			let renderAppend
+			if(appendObj&&appendObj.tag){
+				appendObj.componentOptions.propsData.size = _this.size
+				renderAppend = [appendObj]
+			}else{
+				renderAppend = h('div',{
+					class:`p-input--append p-input-size--${_this.size}`
+				},[appendObj])
+			}
+			return h('div',{
+				class:`p-input-pend ${this.$slots.prepend?'p-input-prepend':''} ${this.$slots.append?'p-input-append':''} ${this.$slots.append&&this.$slots.prepend?'both-pend':''}`
+			},[
+				this.$slots.prepend?
+				renderPrepend:undefined,
+				renderTarget,
+				this.$slots.append?
+				renderAppend:undefined,
+			])
+		}else{
+			return renderTarget
+		}
 	}
 }

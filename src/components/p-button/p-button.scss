@@ -319,7 +319,7 @@ $buttonTypeMap:(
 	
 }
 .p-button-size-small{
-	padding: 9px 15px;
+	padding: 8.5px 15px;
 	font-size: $smallFontSize;
 	.fa{
 		width: $smallFontSize;
@@ -327,7 +327,7 @@ $buttonTypeMap:(
 	}
 }
 .p-button-size-small.is-circle{
-	padding: 9px;
+	padding: 8.5px;
 	border-radius: 50%;
 }
 .p-button-size-mini{
