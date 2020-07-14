@@ -8,7 +8,7 @@
 	position: relative;
 	height: $defaultInputHeight;
 	.fa{
-		position: absolute;
+		// position: absolute;
 		font-size: $baseFontSize;
 		color:$defaultBorderColor;
 		right: 5px;
@@ -25,7 +25,7 @@
 	.p-input-clear{
 		width: 25px;
 		text-align: center;
-		visibility:hidden ;
+		display:none ;
 		right: 5px;
 		color:$defaultBorderColor ;
 	}
@@ -83,10 +83,20 @@
 		padding-left: 40px;
 	}
 	.p-input-prefix{
+		position: absolute;
 		left:5px;
+		.fa{
+			left:0px;
+		}
+		.fa:hover{
+			color: $defaultBorderColor;
+		}
 	}
 	.p-input-suffix{
 		right: 5px;
+		.fa:hover{
+			color: $defaultBorderColor;
+		}
 	}
 	.p-input-prefix:hover{
 		color: $defaultBorderColor;
@@ -94,14 +104,18 @@
 	.p-input-suffix:hover{
 		color: $defaultBorderColor;
 	}
-	.p-textarea--content{
-		
+	.p-input-append-el{
+		position: absolute;
+		display: inline-block;
+		right: 5px;
+		width: auto;
+		height: 100%;
 	}
 }
 
 .p-input:hover{
 	.p-input-clear{
-		visibility:visible ;
+		display:inline-block ;
 	}
 }
 .p-input-medium{

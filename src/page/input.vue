@@ -21,7 +21,19 @@
 			<p-input placeholder="请输入" clearable size="mini"></p-input>
 		</div>
 		<div>
-			<p-input prefix-icon="fa-user" clearable autofocus suffix-icon="fa-user"></p-input>
+			<p-input prefix-icon="fa-user" size="mini" clearable autofocus suffix-icon="fa-user">
+				<template v-slot:prefix>
+					<i class="fa fa-address-book"></i>
+				</template>
+			</p-input>
+			<p-input size="small" clearable>
+				<template v-slot:prefix>
+					<i class="fa fa-address-book"></i>
+				</template>
+				<template v-slot:suffix>
+					<i class="fa fa-unlock"></i>
+				</template>
+			</p-input>
 		</div>
 		<div style="width: 50%;">
 			<p-input type="textarea" disabled></p-input>

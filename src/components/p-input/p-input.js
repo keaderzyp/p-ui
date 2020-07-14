@@ -107,6 +107,8 @@ export default{
 			appended:false,
 			prepended:false,
 			renderRows:0,
+			suffixHide:false,
+			cleared:false,
 		}
 	},
 	model:{
@@ -131,14 +133,11 @@ export default{
 	},
 	render(h){
 		let _this = this;
-		
 		let renderInput = () => {
-			
-			let cleared = false;
 			if(_this.clearable&&_this.inputStr.length>0){
-				cleared = true;
+				_this.cleared = true;
 			}else{
-				cleared = false;
+				_this.cleared = false;
 			}
 			if(_this.prefixIcon.trim().length>0){
 				_this.prepended = true;
@@ -150,11 +149,33 @@ export default{
 			}else{
 				_this.appended = false;
 			}
-			
+			let appendElements = h('span',{
+				class:`p-input-append-el`
+			},[
+				_this.$slots.suffix?h('span',{
+					class:`p-input-suffix`,
+				},_this.$slots.suffix):_this.appended?h('i',{
+					class:`fa ${_this.suffixIcon} p-input-suffix`,
+				}):undefined,
+				_this.cleared?h('i',{
+					class:`fa fa-times-circle-o p-input-clear`,
+					on:{
+						click(){
+							_this.$refs.input.value = '';
+							_this.inputStr = '';
+							_this.$emit('cc','')
+							_this.$emit('clear')
+						},
+					}
+				}):undefined
+			])
 			return [
-				_this.prepended?h('i',{class:`fa ${_this.prefixIcon} p-input-prefix`}):undefined,
+				_this.$slots.prefix?h('span',{
+					class:`p-input-prefix`
+				},_this.$slots.prefix)
+					:_this.prepended?h('i',{class:`fa ${_this.prefixIcon} p-input-prefix`}):undefined,
 				h('input',{
-					class:`p-input--content ${_this.disabled?'is-disabled':''} ${_this.prepended?'p-input-prepended':''} ${_this.appended||cleared?'p-input-appended':''} p-input-size--${_this.size}`,
+					class:`p-input--content ${_this.disabled?'is-disabled':''} ${_this.prepended||_this.$slots.prefix?'p-input-prepended':''} ${_this.appended||_this.cleared||_this.$slots.suffix?'p-input-appended':''} p-input-size--${_this.size}`,
 					attrs:{
 						placeholder:_this.placeholder,
 						disabled:_this.disabled?'disabled':undefined,
@@ -189,19 +210,7 @@ export default{
 						},
 					},
 				},_this.value),
-				cleared?h('i',{
-					class:`fa fa-times-circle-o p-input-clear`,
-					on:{
-						click(){
-							_this.$refs.input.value = '';
-							_this.inputStr = '';
-							_this.$emit('cc','')
-							_this.$emit('clear')
-						}
-					}
-				}):_this.appended?h('i',{
-					class:`fa ${_this.suffixIcon} p-input-suffix`
-				}):undefined
+				appendElements
 			]
 		}
 		
@@ -236,15 +245,12 @@ export default{
 						_this.inputStr = arguments[0].target.value
 						_this.$emit('cc',_this.inputStr)
 						_this.$emit('input',_this.inputStr)
-					},
-					load(){
-						console.log(_this)
 					}
 				}
 			},_this.value)]
 		}
 		let renderTarget = h('div',{
-			class:`${this.type!='textarea'?'p-input':'p-textarea'} p-${this.type!='textarea'?'input':'textarea'}-${_this.size}`
+			class:`${this.type!='textarea'?'p-input':'p-textarea'} p-${this.type!='textarea'?'input':'textarea'}-${_this.size}`,
 		},this.type!='textarea'?renderInput():renderTextarea());
 		if(this.type=='text'&&(this.$slots.prepend||this.$slots.append)){
 			let prependObj = this.$slots.prepend?this.$slots.prepend[0]:undefined;
