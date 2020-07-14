@@ -10,10 +10,12 @@
 		position: absolute;
 		font-size: $baseFontSize;
 		color:$defaultBorderColor;
-		right: 10px;
+		right: 5px;
 		top: 0px;
 		line-height: $defaultInputHeight;
 		height: 100%;
+		width: 25px;
+		text-align: center;
 	}
 	.fa:hover{
 		color: $infoColorPlain;
@@ -23,6 +25,8 @@
 		width: 25px;
 		text-align: center;
 		visibility:hidden ;
+		right: 5px;
+		color:$defaultBorderColor ;
 	}
 	.p-input--content{
 		-webkit-appearance: none;
@@ -38,17 +42,15 @@
 		height: $defaultInputHeight;
 		line-height: $defaultInputHeight;
 		cursor: pointer;
-		transition: .2s;
+		transition:border .2s;
 		color: $defaultColor;
 	}
+	
 	.p-input--content:hover{
 		border-color: $defaultColor;
 	}
 	.p-input--content:focus{
 		border-color: $defaultActiveBorderColor;
-	}
-	.p-input--content:placeholder{
-		color:red
 	}
 	.p-input--content.is-disabled{
 		cursor: not-allowed;
@@ -72,12 +74,30 @@
 		font-size:$miniFontSize;
 		line-height: $miniInputHeight;
 		height: $miniInputHeight;
-		
 	}
 	.p-input-appended{
 		padding-right: 40px;
 	}
+	.p-input-prepended{
+		padding-left: 40px;
+	}
+	.p-input-prefix{
+		left:5px;
+	}
+	.p-input-suffix{
+		right: 5px;
+	}
+	.p-input-prefix:hover{
+		color: $defaultBorderColor;
+	}
+	.p-input-suffix:hover{
+		color: $defaultBorderColor;
+	}
+	.p-textarea--content{
+		
+	}
 }
+
 .p-input:hover{
 	.p-input-clear{
 		visibility:visible ;
@@ -99,6 +119,63 @@
 	height: $miniInputHeight;
 	.fa{
 		line-height: $miniInputHeight;
+	}
+}
+
+.p-textarea{
+	width: 100%;
+	.p-textarea--content{
+		padding: 5px 15px;
+		line-height: 1.5;
+		width: 100%;
+		background-color: #fff;
+		box-sizing: border-box;
+		background-image: none;
+		border:1px solid $defaultBorderColor;
+		border-radius: 4px;
+		outline:none;
+		font-size: $baseFontSize;
+		cursor: pointer;
+		transition:border .2s;
+		color: $defaultColor;
+		min-height: $defaultInputHeight;
+	}
+	.p-textarea--content:hover{
+		border-color: $defaultColor;
+	}
+	.p-textarea--content:focus{
+		border-color: $defaultActiveBorderColor;
+	}
+	.p-textarea--content.is-disabled{
+		cursor: not-allowed;
+		background: $infoDisabledBackgroundColorPlain;
+	}
+	.p-textarea--content.is-disabled:hover{
+		border:1px solid $defaultBorderColor;
+	}
+	.p-textarea-resize-vertical{
+		resize: vertical;
+	}
+	.p-textarea-resize-none{
+		resize: none;
+	}
+	.p-textarea-resize-both{
+		resize: both;
+	}
+	.p-textarea-resize-horizontal{
+		resize: horizontal;
+	}
+	.p-textarea--content.p-textarea-size--medium{
+		font-size:$mediumFontSize;
+		min-height: $mediumInputHeight;
+	}
+	.p-textarea--content.p-textarea-size--small{
+		font-size:$smallFontSize;
+		min-height: $smallInputHeight;
+	}
+	.p-textarea--content.p-textarea-size--mini{
+		font-size:$miniFontSize;
+		min-height: $miniInputHeight;
 	}
 }
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
